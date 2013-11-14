@@ -93,7 +93,15 @@ module.exports = function (grunt) {
     ,phonegap: {
       config: {
         root: 'app'
-        ,config: 'phonegap/config.xml'
+        ,config: {
+          template: 'phonegap/config.xml'
+          ,data: {
+            id: 'com.phonegap.<%= _.slugify(appName) %>'
+            ,appName: '<%= _.slugify(appName) %>'
+            ,authorName: '<%= authorName %>'
+            ,authorEmail: '<%= authorEmail %>'
+          }
+        }
         ,cordova: 'phonegap'
         ,path: 'build'
         //,plugins: ['/local/path/to/plugin', 'http://example.com/path/to/plugin.git']

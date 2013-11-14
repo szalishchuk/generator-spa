@@ -1,3 +1,6 @@
 {
-  "name": "<%= appName %>"
+  
+  "appName": "<%= appName %>"
+  ,"authorName": "<%= authorName %>"
+  ,"authorEmail": "<%= authorEmail %>"
 }

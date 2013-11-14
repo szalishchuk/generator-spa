@@ -25,16 +25,16 @@ SpaGenerator.prototype.askFor = function askFor() {
   // Define question that should be asked on project init
   var prompts = [
     {
+      name: 'appName'
+      ,message: 'What is the name of your app?'
+    }
+    ,{
       name: 'authorName'
       ,message: 'Please state your name:'
     }
     ,{
       name: 'authorEmail'
       ,message: 'Please state your email'
-    }
-    ,{
-      name: 'appName'
-      ,message: 'What is the name of your app?'
     }
   ];
 
@@ -135,7 +135,7 @@ SpaGenerator.prototype.configs = function() {
   this.template('_config.json', 'config.json');
   // Configure phonegap app
   this.copy('phonegap/config.xml', 'phonegap/config.xml');
-  this.copy('phonegap/config.json', 'phonegap/config.json');
+  this.template('phonegap/config.json', 'phonegap/config.json');
 };
 
 
