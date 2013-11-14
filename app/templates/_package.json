@@ -1,0 +1,28 @@
+{
+  "name": "app"
+  ,"description": "app core was generated with generator-spa yeoman template"
+  ,"version": "0.0.1"
+  ,"author": {
+    "name": "name"
+    ,"email": "email"
+  }
+  ,"private": true
+  ,"devDependencies": {
+    "bower": "latest"
+    ,"phonegap": "latest"
+    ,"grunt": "latest"
+    ,"grunt-phonegap": "latest"
+    ,"grunt-bower-requirejs": "latest"
+    ,"grunt-contrib-requirejs": "latest"
+    ,"grunt-contrib-connect": "latest"
+    ,"grunt-contrib-watch": "latest"
+    ,"grunt-contrib-less": "latest"
+    ,"grunt-open": "latest"
+    ,"matchdep": "latest"
+    ,"connect-livereload": "latest"
+    ,"moment": "latest"
+  }
+  ,"engines": {
+    "node": ">=0.8.0"
+  }
+}
