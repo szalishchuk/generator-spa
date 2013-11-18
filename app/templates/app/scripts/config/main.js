@@ -1,5 +1,5 @@
 require.config({
-    baseUrl: "app/scripts"
+    baseUrl: "scripts"
     ,paths: {
     }
     ,shim: {
@@ -51,7 +51,7 @@ require.config({
 
 require([
     // Load our app module and pass it to our definition function
-    '../app'
+    'app'
     ], function(App) {
         App.start(); // The 'app' dependency is passed in as "App"
     }
