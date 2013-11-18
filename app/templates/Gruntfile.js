@@ -44,7 +44,7 @@ module.exports = function (grunt) {
         // Files to watch
         files: [ 'app/index.html', 'app/styles/package.less' ]
         // Tasks to run on file change
-        ,tasks: ['build', 'less:development']
+        ,tasks: [ 'less:development' ]
       }
     }
     // Compile LESS files to CSS
