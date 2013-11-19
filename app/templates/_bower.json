@@ -7,5 +7,6 @@
     ,"requirejs": "latest"
     ,"requirejs-text": "latest"
     ,"jquery": "latest"
+    ,"normalize-css": "latest"
   }
 }
