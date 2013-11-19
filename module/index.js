@@ -13,24 +13,24 @@ var ModuleGenerator = module.exports = function ModuleGenerator(args, options, c
 util.inherits(ModuleGenerator, yeoman.generators.NamedBase);
 
 ModuleGenerator.prototype.askFor = function() {
-    //var cb = this.async();
+    var cb = this.async();
 
     // Define question that should be asked on project init
-    // var prompts = [
-    //     {
-    //       name: 'moduleName'
-    //       ,message: 'What is the name of your module?'
-    //     }
-    // ];
+    var prompts = [
+        {
+          name: 'viewClassname'
+          ,message: 'Please state className for the View?'
+        }
+    ];
 
-    // this.prompt(prompts, function(props) {
-    //     // Bind property names
-    //     this.moduleName = props.moduleName;
-    //     // Run callback function, which lets yeoman to move on
-    //     cb();
-    // }.bind(this));
+
+    this.prompt(prompts, function(props) {
+        // Bind property names
+        this.viewClassname = props.viewClassname;
+        // Run callback function, which lets yeoman to move on
+        cb();
+    }.bind(this));
     
-    //cb();
 };
 
 ModuleGenerator.prototype.skeleton = function() {
@@ -42,4 +42,9 @@ ModuleGenerator.prototype.skeleton = function() {
 
 ModuleGenerator.prototype.core = function() {
     this.template('composer.js', this.name + '/composer.js');
+};
+
+ModuleGenerator.prototype.addView = function() {
+    this.template('view.js', this.name + '/views/' + this.viewClassname + '.js');
+    this.template('template.html', this.name + '/templates/' + this.viewClassname + '.html');
 };

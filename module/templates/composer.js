@@ -8,22 +8,26 @@ define([
     // Module composer prototype
     ,'prototypes/module.composer'
 
+    // Local dependencies
+    ,'modules/<%= name %>/views/<%= viewClassname %>'
+
     ], function(
                 $
                 ,_
                 ,Backbone
                 ,Eva
                 ,ModuleComposerPrototype
+                ,<%= _.capitalize(viewClassname) %>
     ) {
-        var <%= _.capitalize(name) %>Module = Backbone.Module.Composer.extend({
+        var <%= _.capitalize(name) %>Module = Backbone.ModuleComposer.extend({
             tagName: 'section'
             ,className: 'module <%= name %>'
             ,submodules: [
                 // Specify submodules
-                // {
-                //     constructor: SomeView
-                //     ,arguments: { arg1, arg2 }
-                // }
+                {
+                    constructor: <%= _.capitalize(viewClassname) %>
+                    ,arguments: {}
+                }
             ]
             ,initialize: function() {
                 // Render the module
