@@ -16,7 +16,7 @@ var SpaGenerator = module.exports = function SpaGenerator(args, options, config)
 
 util.inherits(SpaGenerator, yeoman.generators.Base);
 
-SpaGenerator.prototype.askFor = function askFor() {
+SpaGenerator.prototype.askFor = function() {
   var cb = this.async();
 
   // have Yeoman greet the user.
@@ -49,7 +49,7 @@ SpaGenerator.prototype.askFor = function askFor() {
   }.bind(this));
 };
 
-SpaGenerator.prototype.skeleton = function app() {
+SpaGenerator.prototype.skeleton = function() {
   // Create root directory for the app
   this.mkdir('app');
     this.mkdir('app/scripts');
@@ -77,9 +77,9 @@ SpaGenerator.prototype.scripts = function() {
     //this.template('app/scripts/pages/index.js', 'app/scripts/pages/index.js');
 
   this.mkdir('app/scripts/prototypes');
-    // this.template('app/scripts/prototypes/module.composer.js', 'app/scripts/prototypes/module.composer.js');
-    // this.template('app/scripts/prototypes/page.composer.js', 'app/scripts/prototypes/page.composer.js');
-    // this.template('app/scripts/prototypes/page.router.js', 'app/scripts/prototypes/page.router.js');
+    this.copy('app/scripts/prototypes/module.composer.js', 'app/scripts/prototypes/module.composer.js');
+    this.copy('app/scripts/prototypes/page.composer.js', 'app/scripts/prototypes/page.composer.js');
+    this.copy('app/scripts/prototypes/page.router.js', 'app/scripts/prototypes/page.router.js');
 
   this.mkdir('app/scripts/helpers');
     // Add commonly used methods and functions, that should be available throughout the app
@@ -139,7 +139,7 @@ SpaGenerator.prototype.configs = function() {
 };
 
 
-SpaGenerator.prototype.projectfiles = function projectfiles() {
+SpaGenerator.prototype.projectfiles = function() {
   this.copy('gitignore', '.gitignore');
   this.copy('editorconfig', '.editorconfig');
   this.copy('jshintrc', '.jshintrc');
