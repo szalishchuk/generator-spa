@@ -12,7 +12,7 @@ define([
                 ,Eva
     ) {
 
-        Backbone.Module.Composer = Backbone.View.extend({
+        Backbone.ModuleComposer = Backbone.View.extend({
             tagName: 'section'
             ,className: 'module'
             ,moduleName: ''
@@ -36,6 +36,6 @@ define([
             }
 
         });
-        return Backbone.Module.Composer;
+        return Backbone.ModuleComposer;
     }
 );

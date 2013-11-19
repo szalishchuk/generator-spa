@@ -5,22 +5,6 @@ define([
     ,'backbone'
     ,'events'
 
-    // Header and navigation modules are returned already instantiated,
-    // because they will are reused on every single page
-
-    // Navigation menu sliding from the left
-    //,'modules/navigation/controller'
-    // Primary header
-    //,'modules/header/controller'
-    // Error module for 404 or 500, or any other error page
-    //,'modules/error/controller'
-
-    // Page modules represented by a subrouter class.
-    // Subrouter gets instantiated depending on the current url
-    // (e.g. with '~/locations/' -> LocationsPageRouter)
-    // invokePageModule method is responsible for PageModule instantiation
-    // If there's no subrote, then we render the homePage 
-
     // Declared subroutes
     //,'pages/index'
 
@@ -32,33 +16,20 @@ define([
         ,_
         ,Backbone
         ,Eva
-        ,NavigationModule
-        ,HeaderModule
-        ,ErrorModuleController
-        ,HomePageView
-        ,LocationsPageRouter
-        ,ApplicationPageRouter
-        ,TermsPageRouter
+        ,helpers
     ) {
         var AppRouter = Backbone.Router.extend({
             routes: {
-                '': 'invokeIndexPage'
-                ,':pageName(/*subroute)': 'invokePageModule'
+                // '': 'invokeIndexPage'
+                // ,':pageName(/*subroute)': 'invokePageModule'
             }
             ,currentPage: null
             ,initialize: function(options) {
-                _.bindAll(this);
                 this.$el = $('#page-wrap');
-                this.addRegions();
                 this.startHistory();
                 // Publish app.initiliazed event for things like google analytics to kick in
                 Eva.trigger('app.initialized');
                 Eva.on('navigateTo', this.onNavigateTo);
-            }
-            ,addRegions: function() {
-                $('body')
-                    .append(NavigationModule.$el)
-                    .append(HeaderModule.$el);
             }
             ,startHistory: function() {
                 if(!Backbone.History.started)

@@ -15,7 +15,7 @@ define([
                 ,Eva
                 ,Subroute
     ) {
-        Backbone.Page.Router = Backbone.SubRoute.extend({
+        Backbone.PageRouter = Backbone.SubRoute.extend({
             routes: {
                 '': 'injectIndexPage'
             },
@@ -34,6 +34,6 @@ define([
                 Eva.trigger('pageChange', this.pageView);
             }
         });
-        return Backbone.Page.Router;
+        return Backbone.PageRouter;
     }
 );

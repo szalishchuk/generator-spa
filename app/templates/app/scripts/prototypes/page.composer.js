@@ -14,7 +14,7 @@ define([
                 ,Eva
                 ,overthrow
     ) {
-        Backbone.Page.Composer = Backbone.View.extend({
+        Backbone.PageComposer = Backbone.View.extend({
             tagName: 'section'
             ,className: 'page'
             ,pageName: ''
@@ -58,6 +58,6 @@ define([
             }
 
         });
-        return Backbone.Page.Composer;
+        return Backbone.PageComposer;
     }
 );
