@@ -38,10 +38,7 @@ ModuleGenerator.prototype.skeleton = function() {
   this.mkdir(this.name + '/templates');
   this.mkdir(this.name + '/collections');
   this.mkdir(this.name + '/models');
-};
-
-ModuleGenerator.prototype.core = function() {
-    this.template('composer.js', this.name + '/composer.js');
+  this.template('composer.js', this.name + '/composer.js');
 };
 
 ModuleGenerator.prototype.addView = function() {
