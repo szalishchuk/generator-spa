@@ -74,7 +74,7 @@ SpaGenerator.prototype.scripts = function() {
 
   this.mkdir('app/scripts/modules');
   this.mkdir('app/scripts/pages');
-    //this.template('app/scripts/pages/index.js', 'app/scripts/pages/index.js');
+    this.template('app/scripts/pages/index.js', 'app/scripts/pages/index.js');
 
   this.mkdir('app/scripts/prototypes');
     this.copy('app/scripts/prototypes/module.composer.js', 'app/scripts/prototypes/module.composer.js');

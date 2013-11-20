@@ -6,7 +6,7 @@ define([
     ,'events'
 
     // Declared subroutes
-    //,'pages/index'
+    ,'pages/index'
 
     // Helpers
     ,'helpers/common'
@@ -16,12 +16,13 @@ define([
         ,_
         ,Backbone
         ,Eva
+        ,HomePage
         ,helpers
     ) {
         var AppRouter = Backbone.Router.extend({
             routes: {
-                // '': 'invokeIndexPage'
-                // ,':pageName(/*subroute)': 'invokePageModule'
+                '': 'invokeIndexPage'
+                ,':pageName(/*subroute)': 'invokePageModule'
             }
             ,currentPage: null
             ,initialize: function(options) {
@@ -41,7 +42,7 @@ define([
             // Invoke Home Page Module
             ,invokeIndexPage: function() {
                 // Instantiate LocationsPageView only once
-                if(!this.pageView) this.pageView = new HomePageView();
+                if(!this.pageView) this.pageView = new HomePage();
                 // Detach all the other contents from the DOM
                 // and preserve event binders with .detach()
                 this.$el.contents().detach();
