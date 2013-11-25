@@ -5,19 +5,22 @@ define([
     ,'backbone'
     ,'events'
 
-    // Declared subroutes
-    ,'pages/index'
-
     // Helpers
     ,'helpers/common'
+
+    // Home page
+    ,'pages/index'
+    // Declared subroutes
+    // pages/.../router
 
     ], function(
         $
         ,_
         ,Backbone
         ,Eva
-        ,HomePage
         ,helpers
+        ,HomePage
+        // ...
     ) {
         var AppRouter = Backbone.Router.extend({
             routes: {

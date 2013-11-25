@@ -6,7 +6,7 @@ define([
     ,'events'
 
     // Subroute Backbone extension
-    ,'libs/backbone/backbone.subroute.min'
+    ,'backbone.subroute'
 
     ], function(
                 $
