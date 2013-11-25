@@ -13,11 +13,11 @@ define([
             ,Backbone
             ,env
 ) {
-    var <%= _.camelize(_.capitalize(name)) %> = Backbone.Model.extend({
+    var <%= _.camelize(_.capitalize(name)) %>Model = Backbone.Model.extend({
         // Add new stuff...
         // For instance, utilize the API based on enviroment the app is running in
         // url: env.getUrlFor('APIkey')
     });
 
-    return <%= _.camelize(_.capitalize(name)) %>;
+    return <%= _.camelize(_.capitalize(name)) %>Model;
 });
