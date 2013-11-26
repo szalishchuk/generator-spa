@@ -55,7 +55,7 @@ module.exports = function (grunt) {
       },
       livereload: {
         // Files to watch
-        files: [ 'app/index.html', 'app/styles/package.less' ]
+        files: [ '**/*.less' ]
         // Tasks to run on file change
         ,tasks: [ 'less:development' ]
       }
