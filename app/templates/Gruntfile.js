@@ -7,6 +7,19 @@ var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
 var mountFolder = function (connect, dir) {
   return connect.static(require('path').resolve(dir));
 };
+
+var pushStateHook = function (url) {
+  var path = require('path');
+  var request = require('request'); // Need to be added into package.json
+  return function (req, res, next) {
+    var ext = path.extname(req.url);
+    if ((ext == "" || ext === ".html") && req.url != "/") {
+      req.pipe(request(url)).pipe(res);
+    } else {
+      next();
+    }
+  };
+};
  
 module.exports = function (grunt) {
   // load all grunt tasks
@@ -79,7 +92,11 @@ module.exports = function (grunt) {
       ,livereload: {
         options: {
           middleware: function (connect) {
-            return [ lrSnippet, mountFolder(connect, 'app/') ];
+            return [
+                pushStateHook("http://localhost:9000")
+                ,lrSnippet
+                ,mountFolder(connect, 'app')
+            ];
           }
         }
       }

@@ -18,6 +18,7 @@
     ,"grunt-contrib-watch": "latest"
     ,"grunt-contrib-less": "latest"
     ,"grunt-open": "latest"
+    ,"request": "latest"
     ,"matchdep": "latest"
     ,"connect-livereload": "latest"
     ,"moment": "latest"
