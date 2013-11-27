@@ -21,7 +21,7 @@ define([
             }
             ,handleInternalLinks: function(e) {
                 e.preventDefault();
-                var href = $(e.target).attr('href').toString();
+                var href = $(e.currentTarget).attr('href').toString();
                 this.appRouter.navigate(href, { trigger: true });
             }
             ,goBack: function(e) {

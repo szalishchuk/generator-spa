@@ -54,6 +54,7 @@ SpaGenerator.prototype.skeleton = function() {
   this.mkdir('app');
     this.mkdir('app/scripts');
     this.mkdir('app/styles');
+    this.mkdir('app/images');
     this.mkdir('app/vendors');
     this.template('app/index.html', 'app/index.html');
   // Target directory with packages ready for distribution
