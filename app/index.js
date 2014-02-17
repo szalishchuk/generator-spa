@@ -56,7 +56,7 @@ SpaGenerator.prototype.skeleton = function() {
     this.mkdir('app/styles');
     this.mkdir('app/images');
     this.mkdir('app/vendors');
-    this.template('app/index.html', 'app/index.html');
+    this.template('app/_index.html', 'app/_index.html');
   // Target directory with packages ready for distribution
   this.mkdir('dist');
   // Phonegap configuration root

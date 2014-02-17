@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title><!-- @echo name --></title>
+
+        <meta
+                charset="utf-8"
+        />
+        <meta
+                name="format-detection"
+                content="telephone=no"
+        />
+        <meta
+                name="viewport"
+                content="
+                     user-scalable=no
+                    ,initial-scale=1
+                    ,maximum-scale=1
+                    ,minimum-scale=1
+                    ,width=device-width
+                    ,height=device-height
+                    ,target-densitydpi=device-dpi"
+        />
+
+        <!-- @if NODE_ENV == 'DEVELOPMENT' -->
+        
+        <link
+                rel="stylesheet"
+                href="styles/package.css"
+        />
+
+        <script
+                src="vendors/requirejs/require.js"
+                data-main="scripts/config/main"
+        ></script>
+
+        <!-- @endif -->
+
+
+        <!-- @if NODE_ENV == 'PRODUCTION' -->
+        
+        <link
+                rel="stylesheet"
+                href="styles/package.css"
+        />
+
+        <script
+                src="scripts/package.js"
+        ></script>
+
+        <!-- @endif -->
+
+    </head>
+    <body>
+        <section id="page-wrap" class="page-wrap"></section>
+    </body>
+</html>

@@ -1,13 +1,18 @@
 {
-  "name": "<%= _.slugify(appName) %>"
-  ,"version": "0.0.1"
-  ,"dependencies": {
-    "underscore": "latest"
-    ,"backbone": "latest"
-    ,"backbone.subroute": "latest"
-    ,"requirejs": "latest"
-    ,"requirejs-text": "latest"
-    ,"jquery": "latest"
-    ,"normalize-css": "latest"
-  }
+     "name": "<%= _.slugify(appName) %>"
+    ,"version": "0.0.1"
+    ,"dependencies": {
+         "almond":                  "latest"
+        ,"backbone":                "latest"
+        ,"backbone.stickit":        "latest"
+        ,"backbone.subroute":       "latest"
+        ,"backbone.dualstorage":    "latest"
+        ,"fastclick":               "latest"
+        ,"jquery":                  "latest"
+        ,"requirejs":               "latest"
+        ,"requirejs-text":          "latest"
+        ,"requirejs-plugins":       "latest"
+        ,"requirejs-domready":      "latest"
+        ,"underscore":              "latest"
+    }
 }

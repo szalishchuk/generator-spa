@@ -1,29 +1,32 @@
 {
-  "name": "app"
-  ,"description": "app core was generated with generator-spa yeoman template"
-  ,"version": "0.0.1"
-  ,"author": {
-    "name": "name"
-    ,"email": "email"
-  }
-  ,"private": true
-  ,"devDependencies": {
-    "bower": "latest"
-    ,"phonegap": "latest"
-    ,"grunt": "latest"
-    ,"grunt-phonegap": "latest"
-    ,"grunt-bower-requirejs": "latest"
-    ,"grunt-contrib-requirejs": "latest"
-    ,"grunt-contrib-connect": "latest"
-    ,"grunt-contrib-watch": "latest"
-    ,"grunt-contrib-less": "latest"
-    ,"grunt-open": "latest"
-    ,"request": "latest"
-    ,"matchdep": "latest"
-    ,"connect-livereload": "latest"
-    ,"moment": "latest"
-  }
-  ,"engines": {
-    "node": ">=0.8.0"
-  }
+    "name": "<%= _.slugify(appName) %>"
+    ,"description": ""
+    ,"version": "0.0.1"
+    ,"author": {
+         "name" :   ""
+        ,"email":   ""
+    }
+    ,"private": true
+    ,"dependencies": {
+         "bower":                   "*"
+        ,"connect-livereload":      "*"
+        ,"grunt":                   "*"
+        ,"grunt-autoprefixer":      "*"
+        ,"grunt-contrib-clean":     "*"
+        ,"grunt-contrib-connect":   "*"
+        ,"grunt-contrib-copy":      "*"
+        ,"grunt-contrib-less":      "*"
+        ,"grunt-contrib-requirejs": "*"
+        ,"grunt-contrib-watch":     "*"
+        ,"grunt-env":               "*"
+        ,"grunt-phonegap":          "*"
+        ,"grunt-preprocess":        "*"
+        ,"request":                 "*"
+        ,"matchdep":                "*"
+        ,"moment":                  "*"
+        ,"phonegap":                "*"
+    }
+    ,"engines": {
+        "node": ">=0.8.0"
+    }
 }
