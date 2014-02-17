@@ -101,6 +101,8 @@ SpaGenerator.prototype.styles = function() {
 
   // Primary dependencies
   this.mkdir('app/styles/deps');
+    // Import css reset with normalize
+    this.copy('app/styles/deps/normalize.less', 'app/styles/deps/normalize.less');
     // Import fonts
     this.copy('app/styles/deps/fonts.less', 'app/styles/deps/fonts.less');
     // Set variables

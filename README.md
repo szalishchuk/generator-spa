@@ -35,6 +35,24 @@ Features:
 
 
 
+## Grunt tasks
+
+### What is Grunt?
+
+In one word: automation. The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes. After you've configured it, a task runner can do most of that mundane work for you—and your team—with basically zero effort.
+
+[generator-spa](https://github.com/szalishchuk/generator-spa) will install grunt for you, so you don't even have to know what [grunt](http://gruntjs.com/) is to use it. But be sure to check out it's [Getting Started](https://github.com/gruntjs/grunt/blob/devel/docs/getting_started.md) guide.
+
+#### Build webapp for production
+
+```
+$ grunt build:webapp:production
+```
+
+
+
+
+
 A generator for [Yeoman](http://yeoman.io).
 
 
