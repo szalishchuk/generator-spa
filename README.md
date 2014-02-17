@@ -1,7 +1,8 @@
 # generator-spa [![Build Status](https://secure.travis-ci.org/szalishchuk/generator-spa.png?branch=master)](https://travis-ci.org/szalishchuk/generator-spa)
 
 
-Features:
+## Features
+
 - workflow automation with grunt
 - webserver based on node.js http module
 - less/sass compiling
@@ -49,6 +50,23 @@ In one word: automation. The less work you have to do when performing repetitive
 $ grunt build:webapp:production
 ```
 
+Builds web application's assets for these to become suitable for distribution. Basically we squeeze down all of the javascript files with templates into a single file called package.js. The very same thing happens to less files, they end up being a part of the one and only package.css file. We also smartly process the index.html file for it to include dependencies based on new environment and copy everything we've generated to the target directory.
+
+By the end of the day we get the following structure:
+
+```
+-dist
+--webapp
+---images
+----*all images from app/images*
+---scripts
+----package.js
+---styles
+----package.css
+---index.html
+```
+
+These assets can be used for production deployment on an ftp or cloud service, and will be hosted by the application server of your choice. They will be also used as a code base for a phonegap application, in fact, if you run any task for building a mobile application, it will run this task first to get all of the assets and only then do it's own magic.
 
 
 
