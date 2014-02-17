@@ -1,58 +1,42 @@
 require.config({
-    baseUrl: "scripts"
+     baseUrl:                    "scripts"
     ,paths: {
+         backbone:               "../vendors/backbone/backbone"
+        ,jquery:                 "../vendors/jquery/dist/jquery"
+        ,requirejs:              "../vendors/requirejs/require"
+        ,underscore:             "../vendors/underscore/underscore"
+        ,async:                  "../vendors/requirejs-plugins/src/async"
+        ,text:                   "../vendors/requirejs-plugins/lib/text"
+        ,fastclick:              "../vendors/fastclick/lib/fastclick"
+        ,"backbone.stickit":     "../vendors/backbone.stickit/backbone.stickit"
+        ,"backbone.subroute":    "../vendors/backbone.subroute/backbone.subroute"
+        ,"backbone.dualstorage": "../vendors/backbone.dualstorage/backbone.dualstorage.amd"
+        ,"requirejs-domready":   "../vendors/requirejs-domready/domReady"
     }
     ,shim: {
-        'jquery': {
-            exports: "$"
+         jquery:         { exports: "$" }
+        ,underscore:     { exports: "_" }
+        ,backbone: {
+             deps:       [ "jquery", "underscore" ]
+            ,exports:    "Backbone"
         }
-        ,'underscore': {
-            exports: "_"
-        }
-        ,'backbone': {
-            deps: ["jquery", "underscore"]
-            ,exports: "Backbone"
-        }
-        ,'backboneStickit': {
-            deps: ["backbone"]
-        }
-        ,'infoBox': {
-            exports: 'InfoBox'
-        }
-        ,'flexslider': {
-            deps: ["jquery"]
-            ,exports: "$.fn.flexslider"
-        }
-        ,'noUiSlider': {
-            deps: ["jquery"]
-            ,exports: "$.fn.noUiSlider"
-        }
-        ,'overthrow': {
-            exports: "window.overthrow"
-        }
-        ,'googleAnalytics': {
-            exports: 'ga'
-        }
-        ,'app': {
+        ,app: {
             deps: [
-                "jquery"
+                 "jquery"
                 ,"underscore"
                 ,"backbone"
-                ,"requirejs-text"
-                //,"async"
+                ,"text"
             ]
         }
-    },
-    waitSeconds: 50000,
-    urlArgs: "bust=" + (new Date()).getTime() // Bust browser/server caching
+    }
+    ,waitSeconds: 50000
+    ,urlArgs: "bust=1385504881274"
+});
+
+// Load our app module and fire it up
+require(['app'], function(App) {
+    App.start();
 });
 
 
 
-require([
-    // Load our app module and pass it to our definition function
-    'app'
-    ], function(App) {
-        App.start(); // The 'app' dependency is passed in as "App"
-    }
-);
