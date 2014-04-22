@@ -11,6 +11,7 @@ require.config({
         ,"backbone.stickit":     "../vendors/backbone.stickit/backbone.stickit"
         ,"backbone.subroute":    "../vendors/backbone.subroute/backbone.subroute"
         ,"backbone.dualstorage": "../vendors/backbone.dualstorage/backbone.dualstorage.amd"
+        ,"backbone-validation":  "../vendors/backbone-validation/dist/backbone-validation-amd"
         ,"requirejs-domready":   "../vendors/requirejs-domready/domReady"
     }
     ,shim: {
