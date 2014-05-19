@@ -44,6 +44,38 @@ In one word: automation. The less work you have to do when performing repetitive
 
 [generator-spa](https://github.com/szalishchuk/generator-spa) will install grunt for you, so you don't even have to know what [grunt](http://gruntjs.com/) is to use it. But be sure to check out it's [Getting Started](https://github.com/gruntjs/grunt/blob/devel/docs/getting_started.md) guide.
 
+
+### Installation manual
+
+
+- Install node.js: Server-side javascript based on google’s V8 engine
+    - go to http://nodejs.org/
+    - download and install a version for your operating system
+
+- Install yeoman: Scaffolding and workflow automation tool, that will allow you to install new components by running predefined commands
+    - open the console and run ```npm install -g yo```
+
+- Install generator-spa: Custom generator based on yeoman
+    - run ```npm install -g generator-spa```
+
+- Install grunt CLI: Workflow automation tool
+    - run ```npm install -g grunt-cli```
+
+- Install bower: Dependency manager
+    - run ```npm install -g bower```
+
+
+- Checkout the project
+- Build and run
+    - move to the project’s location
+    - run ```npm install``` to install all node dependencies
+    - run ```bower install``` to install all javascript dependencies
+    - run ```grunt build:webapp```
+    - run ```grunt run:webapp```
+    - open http://localhost
+
+## Done! By this point you should have application running on your 80 port.
+
 #### Build webapp for production
 
 ```
