@@ -74,7 +74,7 @@ In one word: automation. The less work you have to do when performing repetitive
     - run ```grunt run:webapp```
     - open http://localhost
 
-## Done! By this point you should have application running on your 80 port.
+##### Done! By this point you should have application running on your 80 port.
 
 #### Build webapp for production
 
